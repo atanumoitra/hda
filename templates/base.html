@@ -1,0 +1,84 @@
+ {% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Welcome to the Haldia Development Authority</title>
+   <link rel="stylesheet" type="text/css" href="{% static 'fontawesome/css/all.min.css' %}" >
+   
+   <link href="{% static 'bootstrap.min.css' %}" rel="stylesheet" type="text/css">
+   <link href="{% static 'main.css' %}" rel="stylesheet" type="text/css">
+
+   <style type="text/css">
+        .navbar { 
+         background: url('{% static "back3.jpg" %}') no-repeat center center fixed; 
+         -webkit-background-size: cover;
+         -moz-background-size: cover;
+         -o-background-size: cover;
+         background-size: cover;
+        }
+</style>
+</head>
+
+<body id="reportsPage">
+	 <div class="" id="home">
+        <nav class="navbar navbar-expand-xl">
+            <div class="container h-100">
+            	<a class="navbar-brand" href="base.html">
+                    <img src="{% static 'biswo.png' %}" alt="" />
+                </a>
+            	<a class="navbar-brand" href="base.html">
+                    <img src="{% static 'logo.png' %}" alt="" />
+                </a>
+                <button class="navbar-toggler ml-auto mr-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars tm-nav-icon"></i>
+                </button>
+
+                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto h-100">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-home"></i>
+                                Home
+                               
+                            </a>
+                        </li>
+                         
+                         <li class="nav-item">
+                            <a class="nav-link" href="">
+                                <i class="far fa-address-card"></i>
+                                About Us
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="">
+                                <i class="fa fa-phone"></i>
+                                Contact Us
+                            </a>
+                        </li>
+                       
+                       
+                    </ul>
+                  </div>
+            </div>	
+        </nav>
+     </div>
+    
+
+     <section id="main">
+      {% block content %}
+      
+       {% endblock content %}
+   </section>
+</body>
+
+ <footer id="footer">Copyright &copy;
+       <script type="text/JavaScript">
+       document.write(new Date().getFullYear());
+       </script> HDA
+ </footer>
+</html>
